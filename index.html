@@ -182,6 +182,10 @@
 							<input type="number" class="form-control" id="age" placeholder="Enter your age" required>
 						</div>
 						<div class="form-group">
+							<label for="hours">Hours in Arma</label>
+							<input type="number" class="form-control" id="hours" placeholder="Enter your amount of hours within Arma" required>
+						</div>
+						<div class="form-group">
 							<label for="branch">Select Branch</label>
 							<select class="form-control" id="branch" required>
 								<option value="">Select a branch</option>
@@ -255,6 +259,7 @@
 				const fullname = document.getElementById('fullname').value.trim();
 				const discord = document.getElementById('discord').value.trim();
 				const age = document.getElementById('age').value.trim();
+				consthours = document.getElementById('hours').value.trim();
 				const branch = document.getElementById('branch').value.trim();
 				const experience = document.getElementById('experience').value.trim();
 				const role = document.getElementById('role').value.trim();
@@ -262,7 +267,7 @@
 				const notes = document.getElementById('notes').value.trim();
 	
 				// Validate that all fields are filled
-				if (!fullname || !discord || !age || !branch || !experience || !role || !reason) {
+				if (!fullname || !discord || !age || !hours || !branch || !experience || !role || !reason) {
 					alert('Please fill in all required fields.');
 					return;
 				}
@@ -276,6 +281,7 @@
 							{ name: "Fullname (Roleplay)", value: fullname, inline: true },
 							{ name: "Discord Tag", value: discord, inline: true },
 							{ name: "Age", value: age, inline: true },
+							{ name: "Hours in Arma", value : hours, inline: true },
 							{ name: "Branch", value: branch, inline: true },
 							{ name: "Experience within this branch", value: experience, inline: false },
 							{ name: "Preferred Role within this branch", value: role, inline: false },
